@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <title>Age calculator app</title>
+  </head>
+  <body class="bg-[#F2F2F2] flex flex-col h-screen justify-center font-Poppins">
+    <div class="h-[34.375rem] w-full bg-white rounded-ee-[6.25rem] p-6">
+      <div class="flex flex-col gap-[2rem]">
+        <div class="flex justify-start gap-5">
+          <div class="grow-1 flex flex-col gap-1 shrink">
+            <span class="text-xs tracking-[0.188rem] font-bold text-[#716F6F]"
+              >DAY</span
+            >
+            <input
+              placeholder="DD"
+              type="text"
+              class="outline-none h-[3.375rem] max-w-[5.479rem] border-[1px] border-solid border-[#DCDCDC] rounded-lg focus:border-[#854DFF] p-[1rem] placeholder:font-bold placeholder:text-md font-[#151515] font-bold tracking-[0.02rem] text-[1.25rem] all-inputs"
+              id="date-input"
+            />
+            <span
+              class="font-normal italic text-[0.875rem] grow-1"
+              id="day-warning"
+            ></span>
+          </div>
+          <div class="grow-1 flex flex-col gap-1 shrink">
+            <span class="text-xs tracking-[0.188rem] font-bold text-[#716F6F]"
+              >MONTH</span
+            >
+            <input
+              placeholder="MM"
+              type="text"
+              class="outline-none h-[3.375rem] w-[5.479rem] border-[1px] border-solid border-[#DCDCDC] rounded-lg focus:border-[#854DFF] p-[1rem] text-[1.25rem] all-inputs placeholder:font-bold placeholder:text-md font-[#151515] font-bold tracking-[0.02rem]"
+              id="month-input"
+            />
+            <span
+              class="font-normal italic text-[0.875rem] grow-1"
+              id="month-warning"
+            ></span>
+          </div>
+
+          <div class="grow-1 flex flex-col gap-1 shrink">
+            <span class="text-xs tracking-[0.188rem] font-bold text-[#716F6F]"
+              >YEAR</span
+            >
+            <input
+              placeholder="YYYY"
+              type="text"
+              class="outline-none h-[3.375rem] w-[5.479rem] border-[1px] border-solid border-[#DCDCDC] rounded-lg focus:border-[#854DFF] p-[1rem] text-[1.25rem] placeholder:font-bold placeholder:text-md font-[#151515] font-bold tracking-[0.02rem] all-inputs"
+              id="year-input"
+            />
+            <span
+              class="font-normal italic text-[0.875rem] grow-1"
+              id="year-warning"
+            ></span>
+          </div>
+        </div>
+        <div class="w-full h-[84px] p-0 m-0 flex justify-center relative">
+          <span
+            class="absolute h-0.5 bg-[#DCDCDC] top-[50%] translate-y-[-50%] z-0 left-0 w-full"
+          ></span>
+          <span
+            class="absolute h-0.5 bg-[#DCDCDC] top-[50%] translate-y-[-50%] z-0 right-0 w-full"
+          ></span>
+
+          <div class="z-10 rounded-full" id="check-btn">
+            <img
+              src="/assets/images/icon-arrow.svg"
+              alt=""
+              class="bg-[#854DFF] p-[20px] rounded-full active:bg-[#151515] transition-all active:scale-50"
+            />
+          </div>
+        </div>
+        <div class="w-full min-h-[11.625rem] flex flex-col">
+          <span class="font-bold text-[3.5rem] tracking-[-1.12px] italic"
+            ><span class="pr-[9px] text-[#854DFF]" id="output_year">--</span
+            >years</span
+          >
+          <span class="font-bold text-[3.5rem] tracking-[-1.12px] italic"
+            ><span class="pr-[9px] text-[#854DFF]" id="output_month">--</span
+            >months</span
+          >
+          <span class="font-bold text-[3.5rem] tracking-[-1.12px] italic"
+            ><span class="pr-[9px] text-[#854DFF]" id="output_day">--</span
+            >days</span
+          >
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
